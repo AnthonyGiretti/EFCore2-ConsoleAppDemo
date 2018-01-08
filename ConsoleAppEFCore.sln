@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Items", "Items", "{17B39006-84BA-426B-85F3-8149AF804A14}"
 	ProjectSection(SolutionItems) = preProject
 		Entity Framework Core 2 - nouveautés.pptx = Entity Framework Core 2 - nouveautés.pptx
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
