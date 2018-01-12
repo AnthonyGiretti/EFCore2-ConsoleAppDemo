@@ -6,7 +6,6 @@ namespace ConsoleAppEFCore2
     {
         List<Orders> GetOrders();
         Orders GetOrderById(int id);
-        List<WorkOrder> GetOrdersByInterpolatedByStringQuery(int scrapReasonId);
         List<Product> GetProductsByNameLike(string name);
         Orders GetOrderByIdCompiled(int id);
         int GetProductStock(int productId);

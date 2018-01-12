@@ -50,7 +50,6 @@ namespace ConsoleAppEFCore2
                         Quantity = x.OrderQty,
                         Date = x.DueDate
                     }).FirstOrDefault(x => x.Id == id);
-
         }
 
         public List<WorkOrder> GetWorkOrdersByScrapReasonID(int scrapReasonId)
