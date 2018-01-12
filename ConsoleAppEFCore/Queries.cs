@@ -53,11 +53,16 @@ namespace ConsoleAppEFCore2
 
         }
 
-        public List<WorkOrder> GetOrdersByInterpolatedByStringQuery(int scrapReasonId)
+        public List<WorkOrder> GetWorkOrdersByScrapReasonID(int scrapReasonId)
         {
             var query = _context.WorkOrders.FromSql($"SELECT * FROM Production.WorkOrder WHERE ScrapReasonID = {scrapReasonId}");
 
             return query.ToList();
+        }
+
+        public void UpdateWorkOrdersByScrapReasonID(int scrapReasonId,int qty)
+        {
+            _context.Database.ExecuteSqlCommand($"UPDATE Production.WorkOrder SET OrderQty = {qty} WHERE ScrapReasonID = {scrapReasonId}");
         }
 
         public List<Product> GetProductsByNameLike(string name)
